@@ -1,0 +1,16 @@
+#include<pic.h>
+__CONFIG(0x3F72);
+#define _XTAL_FREQ 20000000
+#define led RB0
+int main()
+{
+PORTB=0x00;
+TRISB=0x00;
+while(1)
+{
+	led=1;
+	__delay_ms(500);
+	led=0;
+	__delay_ms(500);
+}
+}
